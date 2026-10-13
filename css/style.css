@@ -92,6 +92,11 @@ address { font-style: normal; }
 .eyebrow--escuro { color: var(--tinta); }
 .lead { font-size: clamp(1.1rem, 1.6vw, 1.3rem); line-height: 1.55; max-width: 34ch; color: var(--texto); }
 
+.dica { display: flex; align-items: center; gap: .55rem; margin-top: 1.2rem; max-width: 46ch; color: var(--suave); font-size: .98rem; font-weight: 500; line-height: 1.35; }
+.dica .ico { color: var(--amarelo); width: 1.3rem; height: 1.3rem; }
+.dica .so-mouse { display: none; }
+@media (hover: hover) and (pointer: fine) { .dica .so-mouse { display: inline; } .dica .so-toque { display: none; } }
+
 .nota-mao {
   position: relative; max-width: 17ch; padding-bottom: .55rem;
   font: 600 clamp(1.55rem, 2.6vw, 2.1rem)/1.1 var(--mao); color: var(--kraft); rotate: -3deg;
@@ -181,8 +186,12 @@ address { font-style: normal; }
 
 .hero__arte { position: relative; width: 100%; max-width: 640px; margin-inline: auto; aspect-ratio: 1 / .93; }
 .hero__arte img { position: absolute; height: auto; }
-.arte-brilho { position: absolute; inset: 8% -4% 0; background: radial-gradient(closest-side, rgba(255, 128, 24, .34), rgba(255, 128, 24, .1) 58%, transparent 74%); }
-.arte-lanche { filter: drop-shadow(0 22px 22px rgba(0, 0, 0, .6)); }
+.arte-brilho { position: absolute; inset: 8% -4% 0; background: radial-gradient(ellipse 52% 56% at var(--lx, 50%) var(--ly, 50%), rgba(255, 128, 24, .36), rgba(255, 128, 24, .1) 58%, transparent 100%); }
+.arte-lanche { filter: drop-shadow(0 22px 22px rgba(0, 0, 0, .6)); translate: calc(var(--px, 0px) + var(--sx, 0%)) calc(var(--py, 0px) + var(--sy, 0%)); transition: translate .35s var(--ease), scale .35s var(--ease); }
+/* mouse sobre os lanches do início: abrem em leque */
+.hero__arte.is-aberto .arte-lanche--esq { --sx: -7%; --sy: 3%; }
+.hero__arte.is-aberto .arte-lanche--dir { --sx: 7%; --sy: 2%; }
+.hero__arte.is-aberto .arte-lanche--centro { --sy: -4%; scale: 1.04; }
 .arte-lanche--esq { left: -4%; top: 40%; width: 46%; rotate: -6deg; }
 .arte-lanche--dir { right: -4%; top: 35%; width: 48%; rotate: 6deg; }
 .arte-lanche--centro { left: 19%; top: 2%; width: 62%; z-index: 2; }
@@ -230,13 +239,63 @@ address { font-style: normal; }
 .lanche + .lanche { border-left: 1px solid var(--linha); }
 .lanche { display: flex; flex-direction: column; background: linear-gradient(rgba(13, 9, 7, .4), rgba(13, 9, 7, .4)), url("../assets/marca/madeira.jpg") center / 420px auto; }
 .lanche__palco { position: relative; z-index: 1; display: flex; align-items: flex-end; justify-content: center; min-height: 290px; padding: 2.2rem 1rem 0; background: radial-gradient(52% 50% at 50% 62%, rgba(255, 140, 40, .22), transparent 72%); }
-.lanche__palco img { position: relative; z-index: 2; width: min(100%, 310px); height: auto; margin-bottom: -1.7rem; filter: drop-shadow(0 20px 16px rgba(0, 0, 0, .65)); transition: transform .5s var(--ease); }
-.lanche:hover .lanche__palco img { transform: translateY(-6px) scale(1.02); }
+.lanche__palco > img { position: relative; z-index: 2; width: min(100%, 310px); height: auto; margin-bottom: -1.7rem; filter: drop-shadow(0 20px 16px rgba(0, 0, 0, .65)); }
 .lanche__corpo { position: relative; flex: 1; display: flex; flex-direction: column; align-items: center; gap: .85rem; padding: 2.5rem 1.4rem 1.7rem; text-align: center; background: linear-gradient(var(--brasa), #0f0805); border-top: 1px solid rgba(255, 255, 255, .07); }
 .lanche__nome { display: flex; flex-direction: column; justify-content: flex-end; min-height: 1.9em; font: italic 800 clamp(2.1rem, 3vw, 2.6rem)/.95 var(--display); text-transform: uppercase; color: var(--amarelo); text-shadow: 0 2px 0 rgba(0, 0, 0, .5); }
 .lanche__desc { max-width: 30ch; color: var(--texto); font-size: 1rem; line-height: 1.5; }
 .lanche__extra { margin-top: auto; display: inline-flex; align-items: center; gap: .45rem; color: var(--suave); font-weight: 500; font-size: .95rem; }
 .lanche__extra .ico { color: var(--amarelo); }
+
+/* Interação do mouse com os lanches (js/interacao.js cria o invólucro .foto) */
+@property --y1 { syntax: "<percentage>"; inherits: true; initial-value: 0%; }
+@property --y2 { syntax: "<percentage>"; inherits: true; initial-value: 100%; }
+
+.foto {
+  --mordidas: linear-gradient(#000, #000);
+  position: relative; z-index: 2; width: min(100%, 310px); margin-bottom: -1.7rem;
+  transform: perspective(800px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) scale(var(--s, 1));
+  transition: transform .55s var(--ease), --y1 .25s var(--ease), --y2 .25s var(--ease);
+  -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent;
+}
+/* sombra de chão (um drop-shadow no invólucro apareceria preto dentro das mordidas) */
+.foto::before { content: ""; position: absolute; z-index: -1; left: 4%; right: 4%; bottom: -5%; height: 22%; background: radial-gradient(ellipse at center, rgba(0, 0, 0, .75), rgba(0, 0, 0, .35) 45%, transparent 72%); filter: blur(7px); }
+.foto.is-mexendo { transition: transform .12s linear, --y1 .25s var(--ease), --y2 .25s var(--ease); }
+.foto > img { display: block; width: 100%; height: auto; -webkit-user-drag: none; -webkit-mask-image: var(--mordidas); mask-image: var(--mordidas); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-composite: source-in; mask-composite: intersect; transition: filter .3s; }
+.foto.is-scan > img:first-child { filter: brightness(.5) saturate(.85); }
+
+/* faixa do ingrediente sob o mouse: cópia da foto, mais clara, visível só entre --y1 e --y2 */
+.foto > img.foto__camada {
+  position: absolute; inset: 0; opacity: 0; pointer-events: none; filter: brightness(1.28) saturate(1.35); transition: opacity .25s;
+  -webkit-mask-image: linear-gradient(to bottom, transparent calc(var(--y1) - 3%), #000 var(--y1), #000 var(--y2), transparent calc(var(--y2) + 3%)), var(--mordidas);
+  mask-image: linear-gradient(to bottom, transparent calc(var(--y1) - 3%), #000 var(--y1), #000 var(--y2), transparent calc(var(--y2) + 3%)), var(--mordidas);
+}
+.foto.is-scan > img.foto__camada { opacity: 1; }
+
+/* brilho que acompanha o cursor, recortado no formato do lanche */
+.foto__luz {
+  position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s; mix-blend-mode: soft-light;
+  background: radial-gradient(circle at var(--gx, 50%) var(--gy, 30%), rgba(255, 255, 255, .85), rgba(255, 255, 255, 0) 48%);
+  -webkit-mask-image: var(--foto), var(--mordidas); mask-image: var(--foto), var(--mordidas);
+  -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-composite: source-in; mask-composite: intersect;
+}
+.foto.is-hover .foto__luz { opacity: 1; }
+
+.foto__rotulo {
+  position: absolute; left: 0; top: 0; z-index: 5; pointer-events: none; opacity: 0; white-space: nowrap;
+  padding: .32rem .8rem; background: var(--amarelo); color: var(--tinta);
+  font: italic 800 1.05rem/1 var(--display); letter-spacing: .05em; text-transform: uppercase;
+  transform: translate(var(--cx, 0px), var(--cy, 0px)) skewX(-9deg); transition: opacity .18s;
+}
+.foto__rotulo.is-on { opacity: 1; }
+
+.migalha { position: absolute; z-index: 4; width: 7px; height: 7px; border-radius: 50%; background: #d98b3a; pointer-events: none; animation: migalha .65s var(--ease) forwards; }
+@keyframes migalha { to { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(.35); } }
+.foto.is-mordida { animation: mordida .28s var(--ease); }
+@keyframes mordida { 40% { scale: .94; } }
+.foto.is-volta { animation: volta .6s cubic-bezier(.3, 1.5, .5, 1); }
+@keyframes volta { from { opacity: 0; scale: .8; } }
+.lanche.is-chama .controles .btn, .lanche.is-chama .controles .stepper { animation: chama .7s ease 3; }
+@keyframes chama { 50% { box-shadow: 0 0 0 7px rgba(250, 193, 0, .4); } }
 
 /* Etiqueta de preço (pincelada vermelha) */
 .etiqueta {

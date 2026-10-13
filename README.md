@@ -13,6 +13,20 @@ Para ver o site, basta abrir o arquivo `index.html` no navegador.
 5. **Como pedir** — os três passos (montar, enviar pelo WhatsApp, retirar) e o aviso "Apenas retirada no local".
 6. **Onde estamos** — horário, endereço (com link para o Google Maps) e WhatsApp.
 
+### Interação com os lanches
+
+- **Passar o mouse** num lanche do cardápio inclina o lanche em 3D, com um brilho que acompanha o cursor.
+  Conforme o cursor desce, a faixa de cada ingrediente (pão, queijo, hambúrguer…) acende e o nome aparece.
+- **Clicar** dá uma mordida (sempre pela lateral). Depois de quatro, o lanche "renasce" e convida a adicionar ao pedido.
+- **No início da página**, os três lanches acompanham o mouse em profundidade e se abrem em leque quando o cursor chega perto.
+- **No celular**, tocar no lanche mostra um ingrediente por vez, de cima para baixo.
+- Com "reduzir movimento" ligado no aparelho, a inclinação e o movimento do início ficam desligados (os nomes dos ingredientes continuam).
+
+As faixas de cada ingrediente ficam em `data-camadas`, no `<li>` de cada lanche do `index.html`, no formato
+`Nome@início-fim`, separados por `|`, com os números em **% da altura da foto** (de cima para baixo).
+Por exemplo: `Pão de brioche@0-40|Queijo@49-61|Hambúrguer artesanal 140 g@61-73`. Se trocar a foto de um lanche,
+ajuste esses números para casar com as novas camadas.
+
 ### Pedido pelo WhatsApp
 
 O cliente adiciona itens, vê o total na barra amarela que aparece no rodapé da tela e abre a janela
@@ -26,7 +40,8 @@ cliente até ele limpar ou enviar de novo.
 ```
 ├── index.html          ← conteúdo (textos, cardápio, preços, horários, contatos)
 ├── css/style.css       ← visual (cores e fontes no topo, em :root)
-├── js/main.js          ← interações (menu, aberto agora, pedido pelo WhatsApp)
+├── js/main.js          ← menu, "aberto agora" e pedido pelo WhatsApp
+├── js/interacao.js     ← interação do mouse/toque com os lanches (inclinação, ingredientes, mordida, início)
 ├── favicon.svg         ← ícone de hambúrguer (também usado no cabeçalho)
 ├── .github/workflows/pages.yml   ← publica o site no GitHub Pages a cada alteração na main
 └── assets/
@@ -41,7 +56,7 @@ cliente até ele limpar ou enviar de novo.
 | O quê | Onde |
 | --- | --- |
 | **Preço** de um item | o valor `R$` com a classe `js-preco`, em `#cardapio` ou `#extras` no `index.html`. O total, o "a partir de" do início e a mensagem do WhatsApp leem esse valor sozinhos. Atualize também o JSON-LD no `<head>` (usado pelo Google). |
-| **Texto/ingredientes** de um lanche | `.lanche__desc` do item no `index.html` (e a descrição no JSON-LD) |
+| **Texto/ingredientes** de um lanche | `.lanche__desc` do item no `index.html` (e a descrição no JSON-LD). Para o efeito do mouse, também o `data-camadas` do lanche |
 | **Horário** de funcionamento | `ABRE`, `FECHA` e `ULTIMA_RETIRADA` no topo do `js/main.js`, os textos "domingo, 18h às 22h" no `index.html` e o JSON-LD |
 | **WhatsApp** | `TELEFONE` no `js/main.js` (formato `55` + DDD + número) e os links `wa.me` no `index.html` |
 | **Endereço** | seção `#visite`, rodapé, link do Maps e JSON-LD |

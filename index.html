@@ -102,6 +102,7 @@
       <symbol id="ico-menos" viewBox="0 0 24 24"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
       <symbol id="ico-fechar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
       <symbol id="ico-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="ico-cursor" viewBox="0 0 24 24"><path d="M5 3l14 7.5-6.2 1.9L10.5 19z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
       <symbol id="ico-coracao" viewBox="0 0 24 24"><path d="M12 20.5C5 15.2 3 11.6 3 8.7A4.7 4.7 0 0 1 12 7a4.7 4.7 0 0 1 9 1.7c0 2.9-2 6.5-9 11.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
     </defs>
   </svg>
@@ -156,9 +157,9 @@
 
         <div class="hero__arte" aria-hidden="true">
           <div class="arte-brilho"></div>
-          <img class="arte-lanche arte-lanche--esq" src="assets/fotos/dayenu.webp" alt="" width="560" height="490">
-          <img class="arte-lanche arte-lanche--dir" src="assets/fotos/rivh.webp" alt="" width="588" height="494">
-          <img class="arte-lanche arte-lanche--centro" src="assets/fotos/jubileu.webp" alt="" width="578" height="492">
+          <img class="arte-lanche arte-lanche--esq" data-prof="26" src="assets/fotos/dayenu.webp" alt="" width="560" height="490">
+          <img class="arte-lanche arte-lanche--dir" data-prof="20" src="assets/fotos/rivh.webp" alt="" width="588" height="494">
+          <img class="arte-lanche arte-lanche--centro" data-prof="12" src="assets/fotos/jubileu.webp" alt="" width="578" height="492">
           <p class="selo-preco">A partir de <strong data-preco-min>R$ 30,00</strong></p>
           <p class="adesivo">
             <svg class="ico" aria-hidden="true"><use href="#ico-sacola"/></svg>
@@ -196,6 +197,7 @@
             <p class="eyebrow reveal">Hambúrguer artesanal</p>
             <h2 class="h2 aspero reveal" id="cardapio-titulo" style="--d:.06s">Nosso <span>cardápio</span></h2>
             <svg class="faixa faixa--titulo reveal" style="--d:.12s" viewBox="0 0 320 16" preserveAspectRatio="none" aria-hidden="true"><use href="#faixa"/></svg>
+            <p class="dica reveal" style="--d:.16s"><svg class="ico" aria-hidden="true"><use href="#ico-cursor"/></svg><span class="so-mouse">Passe o mouse no lanche para ver os ingredientes. Clique para dar uma mordida!</span><span class="so-toque">Toque no lanche para ver os ingredientes, um por um.</span></p>
           </div>
           <p class="nota-mao reveal" style="--d:.18s">Qual vai ser a sua próxima viagem de sabor? <svg class="ico" aria-hidden="true"><use href="#ico-coracao"/></svg></p>
         </header>
@@ -205,7 +207,7 @@
           o "a partir de" do início e a mensagem do WhatsApp leem esse valor sozinhos.
         -->
         <ul class="lanches">
-          <li class="lanche reveal" data-item data-tipo="lanche" data-id="dayenu" data-nome="Dayenu">
+          <li class="lanche reveal" data-item data-tipo="lanche" data-id="dayenu" data-camadas="Pão de brioche@0-40|Maionese artesanal@40-49|Queijo@49-61|Hambúrguer artesanal 140 g@61-73|Maionese artesanal@73-82|Pão de brioche@82-100" data-nome="Dayenu">
             <div class="lanche__palco">
               <img src="assets/fotos/dayenu.webp" alt="Hambúrguer Dayenu: pão de brioche, hambúrguer artesanal com queijo derretido e maionese artesanal" width="560" height="490" loading="lazy">
             </div>
@@ -218,7 +220,7 @@
             </div>
           </li>
 
-          <li class="lanche reveal" style="--d:.07s" data-item data-tipo="lanche" data-id="jubileu" data-nome="Jubileu">
+          <li class="lanche reveal" style="--d:.07s" data-item data-tipo="lanche" data-id="jubileu" data-camadas="Pão de brioche@0-29|Bacon@29-39|Tomate@39-46|Queijo@46-58|Hambúrguer artesanal 140 g@58-67|Alface americana@67-79|Maionese de ervas@79-85|Pão de brioche@85-100" data-nome="Jubileu">
             <div class="lanche__palco">
               <img src="assets/fotos/jubileu.webp" alt="Hambúrguer Jubileu: pão de brioche, hambúrguer artesanal, queijo, bacon, tomate e alface americana" width="578" height="492" loading="lazy">
             </div>
@@ -231,7 +233,7 @@
             </div>
           </li>
 
-          <li class="lanche reveal" style="--d:.14s" data-item data-tipo="lanche" data-id="rivh" data-nome="R.I.V.H">
+          <li class="lanche reveal" style="--d:.14s" data-item data-tipo="lanche" data-id="rivh" data-camadas="Pão australiano@0-38|Cebola caramelizada@38-51|Queijo cheddar@51-62|Hambúrguer artesanal 140 g@62-75|Maionese@75-84|Pão australiano@84-100" data-nome="R.I.V.H">
             <div class="lanche__palco">
               <img src="assets/fotos/rivh.webp" alt="Hambúrguer R.I.V.H: pão australiano, hambúrguer artesanal, queijo cheddar e cebola caramelizada" width="588" height="494" loading="lazy">
             </div>
@@ -244,7 +246,7 @@
             </div>
           </li>
 
-          <li class="lanche reveal" style="--d:.21s" data-item data-tipo="lanche" data-id="franguinho" data-nome="Franguinho da Hortola">
+          <li class="lanche reveal" style="--d:.21s" data-item data-tipo="lanche" data-id="franguinho" data-camadas="Pão de brioche@0-26|Maionese de limão e ervas@26-33|Alface americana@33-41|Cebola roxa@41-52|Tomate@52-62|Frango empanado e queijo@62-81|Alface americana@81-89|Pão de brioche@89-100" data-nome="Franguinho da Hortola">
             <div class="lanche__palco">
               <img src="assets/fotos/franguinho.webp" alt="Hambúrguer Franguinho da Hortola: pão de brioche, frango empanado, queijo, alface americana, tomate e cebola roxa" width="582" height="468" loading="lazy">
             </div>
@@ -477,5 +479,6 @@
   <div class="sr-only" role="status" aria-live="polite" data-aviso></div>
 
   <script src="js/main.js" defer></script>
+  <script src="js/interacao.js" defer></script>
 </body>
 </html>
