@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peregrino's Burger — Hambúrguer artesanal em Jundiaí</title>
+  <meta name="description" content="Peregrino's Burger: hambúrguer artesanal, pão de brioche e batata frita, todo domingo das 18h às 22h na Vila Hortolândia, em Jundiaí. Veja o cardápio e faça seu pedido pelo WhatsApp.">
+  <meta name="theme-color" content="#0d0907">
+
+  <!-- Compartilhamento (WhatsApp, Instagram, Facebook...). Se o site ganhar um domínio próprio, troque o endereço abaixo. -->
+  <link rel="canonical" href="https://marketingworteventos-cpu.github.io/peregrinos-burger/">
+  <meta property="og:url" content="https://marketingworteventos-cpu.github.io/peregrinos-burger/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Peregrino's Burger">
+  <meta property="og:title" content="Peregrino's Burger — Sabor de verdade, em cada mordida!">
+  <meta property="og:description" content="Hambúrguer artesanal todo domingo, das 18h às 22h, em Jundiaí. Apenas retirada no local.">
+  <meta property="og:image" content="https://marketingworteventos-cpu.github.io/peregrinos-burger/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fontes/barlow-condensed-latin-900-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fontes/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__peregrinoReady)document.documentElement.classList.add('js-falhou');},3500);</script>
+
+  <!-- Dados para o Google (endereço, horário e cardápio). Se mudar um preço, mude aqui também. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org", "@type": "Restaurant",
+    "name": "Peregrino's Burger",
+    "description": "Hambúrguer artesanal. Sabor de verdade, em cada mordida! Apenas retirada no local.",
+    "servesCuisine": ["Hambúrguer artesanal"],
+    "telephone": "+5511972796660",
+    "priceRange": "R$ 30 - R$ 38",
+    "address": { "@type": "PostalAddress", "streetAddress": "Rua Corumbataí, 597 - Vila Hortolândia", "addressLocality": "Jundiaí", "addressRegion": "SP", "addressCountry": "BR" },
+    "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "18:00", "closes": "22:00" }],
+    "hasMenu": { "@type": "Menu", "hasMenuSection": [
+      { "@type": "MenuSection", "name": "Hambúrgueres", "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Dayenu", "description": "Pão de brioche, hambúrguer artesanal de 140 g, queijo e maionese artesanal. Acompanha batata frita.", "offers": { "@type": "Offer", "price": "30.00", "priceCurrency": "BRL" } },
+        { "@type": "MenuItem", "name": "Jubileu", "description": "Pão de brioche, hambúrguer artesanal de 140 g, queijo, alface americana, tomate, bacon e maionese artesanal de ervas. Acompanha batata frita.", "offers": { "@type": "Offer", "price": "35.00", "priceCurrency": "BRL" } },
+        { "@type": "MenuItem", "name": "R.I.V.H", "description": "Pão australiano, hambúrguer artesanal de 140 g, queijo cheddar, cebola caramelizada e maionese. Acompanha batata frita.", "offers": { "@type": "Offer", "price": "38.00", "priceCurrency": "BRL" } },
+        { "@type": "MenuItem", "name": "Franguinho da Hortola", "description": "Pão de brioche, maionese de limão e ervas, frango empanado, queijo, alface americana, tomate e cebola roxa. Acompanha batata frita.", "offers": { "@type": "Offer", "price": "35.00", "priceCurrency": "BRL" } }
+      ] },
+      { "@type": "MenuSection", "name": "Porções", "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Porção de fritas (300 g)", "offers": { "@type": "Offer", "price": "20.00", "priceCurrency": "BRL" } }
+      ] },
+      { "@type": "MenuSection", "name": "Bebidas", "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Refrigerante lata (Coca-Cola ou Sprite)", "offers": { "@type": "Offer", "price": "6.00", "priceCurrency": "BRL" } },
+        { "@type": "MenuItem", "name": "Suco del Valle (laranja ou uva)", "offers": { "@type": "Offer", "price": "7.50", "priceCurrency": "BRL" } },
+        { "@type": "MenuItem", "name": "Água", "offers": { "@type": "Offer", "price": "3.00", "priceCurrency": "BRL" } },
+        { "@type": "MenuItem", "name": "Água com gás", "offers": { "@type": "Offer", "price": "3.50", "priceCurrency": "BRL" } }
+      ] }
+    ] }
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ ÍCONES E EFEITOS (SVG reutilizado pela página) ============ -->
+  <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- bordas "pincel" nos títulos grandes, como no cardápio impresso -->
+      <filter id="aspero" x="-3%" y="-6%" width="106%" height="114%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="7" result="ruido"/>
+        <feDisplacementMap in="SourceGraphic" in2="ruido" scale="3.6" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+
+      <!-- faixa verde, branco e vermelho (bandeira da Itália) -->
+      <symbol id="faixa" viewBox="0 0 320 16">
+        <path d="M2 9 L106 5 L104 12 L0 15 Z" fill="#00923f"/>
+        <path d="M106 5 L214 3 L212 10 L104 12 Z" fill="#f3ead9"/>
+        <path d="M214 3 L318 1 L320 7 L296 9 L212 10 Z" fill="#d8020f"/>
+      </symbol>
+
+      <symbol id="ico-hamburguer" viewBox="0 0 64 64">
+        <path d="M9 28C9 15 20 8 32 8s23 7 23 20z" fill="currentColor"/>
+        <rect x="8" y="33" width="48" height="9" rx="4.5" fill="currentColor" opacity=".72"/>
+        <path d="M7 31q4 6 8 0t8 0 8 0 8 0 8 0 8 0v3H7z" fill="currentColor" opacity=".9"/>
+        <path d="M9 46h46c0 6-5 11-11 11H20C14 57 9 52 9 46z" fill="currentColor"/>
+      </symbol>
+      <symbol id="ico-whatsapp" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.497.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.483.709.3 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </symbol>
+      <symbol id="ico-sacola" viewBox="0 0 24 24">
+        <path d="M5 8h14l-1.1 12.2a1 1 0 0 1-1 .8H7.1a1 1 0 0 1-1-.8z M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="ico-calendario" viewBox="0 0 24 24">
+        <path d="M4 6.5h16V20H4z M4 10.5h16 M8 3.5v4 M16 3.5v4 M8 14h2 M14 14h2 M8 17.2h2 M14 17.2h2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="ico-pin" viewBox="0 0 24 24">
+        <path d="M12 21.5s-7-6-7-11.2a7 7 0 0 1 14 0c0 5.2-7 11.2-7 11.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/>
+      </symbol>
+      <symbol id="ico-fritas" viewBox="0 0 24 24">
+        <path d="M5 11h14l-1.4 9.2a1 1 0 0 1-1 .8H7.4a1 1 0 0 1-1-.8z M7.5 11V4.5 M10.5 11V3 M13.5 11V3.8 M16.5 11V5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="ico-mais" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+      <symbol id="ico-menos" viewBox="0 0 24 24"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+      <symbol id="ico-fechar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+      <symbol id="ico-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="ico-coracao" viewBox="0 0 24 24"><path d="M12 20.5C5 15.2 3 11.6 3 8.7A4.7 4.7 0 0 1 12 7a4.7 4.7 0 0 1 9 1.7c0 2.9-2 6.5-9 11.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ CABEÇALHO ============ -->
+  <header class="site-header" data-header>
+    <div class="container header__inner">
+      <a class="marca" href="#inicio" aria-label="Peregrino's Burger — ir para o início">
+        <img src="favicon.svg" alt="" width="40" height="40">
+        <span class="marca__nome">Peregrino's <b>Burger</b></span>
+      </a>
+
+      <nav class="nav" id="menu-principal" aria-label="Principal" data-nav>
+        <ul class="nav__lista">
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#extras">Fritas e bebidas</a></li>
+          <li><a href="#como-pedir">Como pedir</a></li>
+          <li><a href="#visite">Onde estamos</a></li>
+        </ul>
+        <a class="btn btn--amarelo nav__cta" href="https://wa.me/5511972796660?text=Ol%C3%A1%2C%20Peregrino's%20Burger!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener">
+          <span><svg class="ico" aria-hidden="true"><use href="#ico-whatsapp"/></svg> Pedir no WhatsApp</span>
+        </a>
+      </nav>
+
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu" data-burger>
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============ INÍCIO ============ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="container hero__grid">
+        <div class="hero__texto">
+          <p class="eyebrow reveal">Hambúrguer artesanal · Jundiaí</p>
+          <h1 class="display aspero reveal" id="hero-titulo" style="--d:.06s">
+            Sabor de verdade, <em>em cada mordida!</em>
+          </h1>
+          <svg class="faixa faixa--hero reveal" style="--d:.12s" viewBox="0 0 320 16" preserveAspectRatio="none" aria-hidden="true"><use href="#faixa"/></svg>
+          <p class="lead reveal" style="--d:.18s">Quatro lanches artesanais, todos com batata frita. Todo domingo, das 18h às 22h, na Vila Hortolândia.</p>
+          <div class="hero__acoes reveal" style="--d:.24s">
+            <a class="btn btn--amarelo btn--grande" href="#cardapio"><span>Montar meu pedido <svg class="ico" aria-hidden="true"><use href="#ico-seta"/></svg></span></a>
+            <a class="btn btn--contorno btn--grande" href="#visite"><span>Como chegar</span></a>
+          </div>
+          <p class="status reveal" style="--d:.3s" data-status hidden>
+            <span class="status__ponto" aria-hidden="true"></span>
+            <span data-status-texto></span>
+          </p>
+        </div>
+
+        <div class="hero__arte" aria-hidden="true">
+          <div class="arte-brilho"></div>
+          <img class="arte-lanche arte-lanche--esq" src="assets/fotos/dayenu.webp" alt="" width="560" height="490">
+          <img class="arte-lanche arte-lanche--dir" src="assets/fotos/rivh.webp" alt="" width="588" height="494">
+          <img class="arte-lanche arte-lanche--centro" src="assets/fotos/jubileu.webp" alt="" width="578" height="492">
+          <p class="selo-preco">A partir de <strong data-preco-min>R$ 30,00</strong></p>
+          <p class="adesivo">
+            <svg class="ico" aria-hidden="true"><use href="#ico-sacola"/></svg>
+            <span>Apenas retirada<br>no local!</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAIXA ============ -->
+    <div class="faixa-amarela" aria-hidden="true">
+      <div class="faixa-amarela__trilho">
+        <div class="faixa-amarela__grupo">
+          <span>Hambúrguer artesanal</span><svg class="ico"><use href="#ico-hamburguer"/></svg>
+          <span>Batata frita em todos os lanches</span><svg class="ico"><use href="#ico-hamburguer"/></svg>
+          <span>Todo domingo, 18h às 22h</span><svg class="ico"><use href="#ico-hamburguer"/></svg>
+          <span>Faça seu pedido com antecedência</span><svg class="ico"><use href="#ico-hamburguer"/></svg>
+          <span>Apenas retirada no local</span><svg class="ico"><use href="#ico-hamburguer"/></svg>
+        </div>
+        <div class="faixa-amarela__grupo">
+          <span>Hambúrguer artesanal</span><svg class="ico"><use href="#ico-hamburguer"/></svg>
+          <span>Batata frita em todos os lanches</span><svg class="ico"><use href="#ico-hamburguer"/></svg>
+          <span>Todo domingo, 18h às 22h</span><svg class="ico"><use href="#ico-hamburguer"/></svg>
+          <span>Faça seu pedido com antecedência</span><svg class="ico"><use href="#ico-hamburguer"/></svg>
+          <span>Apenas retirada no local</span><svg class="ico"><use href="#ico-hamburguer"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ CARDÁPIO ============ -->
+    <section class="secao secao--cardapio" id="cardapio" aria-labelledby="cardapio-titulo">
+      <div class="container">
+        <header class="secao__cab">
+          <div>
+            <p class="eyebrow reveal">Hambúrguer artesanal</p>
+            <h2 class="h2 aspero reveal" id="cardapio-titulo" style="--d:.06s">Nosso <span>cardápio</span></h2>
+            <svg class="faixa faixa--titulo reveal" style="--d:.12s" viewBox="0 0 320 16" preserveAspectRatio="none" aria-hidden="true"><use href="#faixa"/></svg>
+          </div>
+          <p class="nota-mao reveal" style="--d:.18s">Qual vai ser a sua próxima viagem de sabor? <svg class="ico" aria-hidden="true"><use href="#ico-coracao"/></svg></p>
+        </header>
+
+        <!--
+          Para mudar um preço, edite o valor "R$" do item (classe js-preco). O total do pedido,
+          o "a partir de" do início e a mensagem do WhatsApp leem esse valor sozinhos.
+        -->
+        <ul class="lanches">
+          <li class="lanche reveal" data-item data-tipo="lanche" data-id="dayenu" data-nome="Dayenu">
+            <div class="lanche__palco">
+              <img src="assets/fotos/dayenu.webp" alt="Hambúrguer Dayenu: pão de brioche, hambúrguer artesanal com queijo derretido e maionese artesanal" width="560" height="490" loading="lazy">
+            </div>
+            <div class="lanche__corpo">
+              <h3 class="lanche__nome">Dayenu</h3>
+              <p class="etiqueta"><span class="js-preco">R$ 30,00</span></p>
+              <p class="lanche__desc">Pão de brioche, hambúrguer artesanal de 140 g, queijo e maionese artesanal.</p>
+              <p class="lanche__extra"><svg class="ico" aria-hidden="true"><use href="#ico-fritas"/></svg> Acompanha batata frita</p>
+              <div class="controles" data-controles><noscript><a class="btn btn--contorno btn--pequeno" href="https://wa.me/5511972796660" rel="noopener"><span>Pedir no WhatsApp</span></a></noscript></div>
+            </div>
+          </li>
+
+          <li class="lanche reveal" style="--d:.07s" data-item data-tipo="lanche" data-id="jubileu" data-nome="Jubileu">
+            <div class="lanche__palco">
+              <img src="assets/fotos/jubileu.webp" alt="Hambúrguer Jubileu: pão de brioche, hambúrguer artesanal, queijo, bacon, tomate e alface americana" width="578" height="492" loading="lazy">
+            </div>
+            <div class="lanche__corpo">
+              <h3 class="lanche__nome">Jubileu</h3>
+              <p class="etiqueta"><span class="js-preco">R$ 35,00</span></p>
+              <p class="lanche__desc">Pão de brioche, hambúrguer artesanal de 140 g, queijo, alface americana, tomate, bacon e maionese artesanal de ervas.</p>
+              <p class="lanche__extra"><svg class="ico" aria-hidden="true"><use href="#ico-fritas"/></svg> Acompanha batata frita</p>
+              <div class="controles" data-controles><noscript><a class="btn btn--contorno btn--pequeno" href="https://wa.me/5511972796660" rel="noopener"><span>Pedir no WhatsApp</span></a></noscript></div>
+            </div>
+          </li>
+
+          <li class="lanche reveal" style="--d:.14s" data-item data-tipo="lanche" data-id="rivh" data-nome="R.I.V.H">
+            <div class="lanche__palco">
+              <img src="assets/fotos/rivh.webp" alt="Hambúrguer R.I.V.H: pão australiano, hambúrguer artesanal, queijo cheddar e cebola caramelizada" width="588" height="494" loading="lazy">
+            </div>
+            <div class="lanche__corpo">
+              <h3 class="lanche__nome">R.I.V.H</h3>
+              <p class="etiqueta"><span class="js-preco">R$ 38,00</span></p>
+              <p class="lanche__desc">Pão australiano, hambúrguer artesanal de 140 g, queijo cheddar, cebola caramelizada e maionese.</p>
+              <p class="lanche__extra"><svg class="ico" aria-hidden="true"><use href="#ico-fritas"/></svg> Acompanha batata frita</p>
+              <div class="controles" data-controles><noscript><a class="btn btn--contorno btn--pequeno" href="https://wa.me/5511972796660" rel="noopener"><span>Pedir no WhatsApp</span></a></noscript></div>
+            </div>
+          </li>
+
+          <li class="lanche reveal" style="--d:.21s" data-item data-tipo="lanche" data-id="franguinho" data-nome="Franguinho da Hortola">
+            <div class="lanche__palco">
+              <img src="assets/fotos/franguinho.webp" alt="Hambúrguer Franguinho da Hortola: pão de brioche, frango empanado, queijo, alface americana, tomate e cebola roxa" width="582" height="468" loading="lazy">
+            </div>
+            <div class="lanche__corpo">
+              <h3 class="lanche__nome">Franguinho <span>da Hortola</span></h3>
+              <p class="etiqueta"><span class="js-preco">R$ 35,00</span></p>
+              <p class="lanche__desc">Pão de brioche, maionese de limão e ervas, frango empanado, queijo, alface americana, tomate e cebola roxa.</p>
+              <p class="lanche__extra"><svg class="ico" aria-hidden="true"><use href="#ico-fritas"/></svg> Acompanha batata frita</p>
+              <div class="controles" data-controles><noscript><a class="btn btn--contorno btn--pequeno" href="https://wa.me/5511972796660" rel="noopener"><span>Pedir no WhatsApp</span></a></noscript></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ FRITAS E BEBIDAS ============ -->
+    <section class="secao secao--extras" id="extras" aria-label="Fritas e bebidas">
+      <div class="container extras__grade">
+
+        <article class="painel painel--fritas reveal" data-item data-tipo="porcao" data-id="fritas" data-nome="Porção de fritas (300 g)">
+          <img class="painel__foto" src="assets/fotos/fritas.webp" alt="Cesto de arame com porção de batata frita" width="604" height="354" loading="lazy">
+          <div class="painel__texto">
+            <h2 class="h3">Porção de fritas <small>(300 g)</small></h2>
+            <p class="etiqueta etiqueta--grande"><span class="js-preco">R$ 20,00</span></p>
+            <div class="controles" data-controles><noscript><a class="btn btn--contorno btn--pequeno" href="https://wa.me/5511972796660" rel="noopener"><span>Pedir no WhatsApp</span></a></noscript></div>
+          </div>
+        </article>
+
+        <article class="painel painel--bebidas reveal" style="--d:.08s">
+          <h2 class="h3">Bebidas</h2>
+          <svg class="faixa faixa--mini" viewBox="0 0 320 16" preserveAspectRatio="none" aria-hidden="true"><use href="#faixa"/></svg>
+          <ul class="bebidas">
+            <li data-item data-tipo="bebida" data-id="refri-coca" data-nome="Refrigerante lata (Coca-Cola)">
+              <span class="bebida__nome">Refrigerante lata <em>Coca-Cola</em></span><span class="pontilhado" aria-hidden="true"></span><span class="js-preco">R$ 6,00</span>
+              <div class="controles" data-controles></div>
+            </li>
+            <li data-item data-tipo="bebida" data-id="refri-sprite" data-nome="Refrigerante lata (Sprite)">
+              <span class="bebida__nome">Refrigerante lata <em>Sprite</em></span><span class="pontilhado" aria-hidden="true"></span><span class="js-preco">R$ 6,00</span>
+              <div class="controles" data-controles></div>
+            </li>
+            <li data-item data-tipo="bebida" data-id="suco-laranja" data-nome="Suco del Valle (laranja)">
+              <span class="bebida__nome">Suco del Valle <em>laranja</em></span><span class="pontilhado" aria-hidden="true"></span><span class="js-preco">R$ 7,50</span>
+              <div class="controles" data-controles></div>
+            </li>
+            <li data-item data-tipo="bebida" data-id="suco-uva" data-nome="Suco del Valle (uva)">
+              <span class="bebida__nome">Suco del Valle <em>uva</em></span><span class="pontilhado" aria-hidden="true"></span><span class="js-preco">R$ 7,50</span>
+              <div class="controles" data-controles></div>
+            </li>
+            <li data-item data-tipo="bebida" data-id="agua" data-nome="Água">
+              <span class="bebida__nome">Água</span><span class="pontilhado" aria-hidden="true"></span><span class="js-preco">R$ 3,00</span>
+              <div class="controles" data-controles></div>
+            </li>
+            <li data-item data-tipo="bebida" data-id="agua-gas" data-nome="Água com gás">
+              <span class="bebida__nome">Água com gás</span><span class="pontilhado" aria-hidden="true"></span><span class="js-preco">R$ 3,50</span>
+              <div class="controles" data-controles></div>
+            </li>
+          </ul>
+          <img class="painel__foto painel__foto--bebidas" src="assets/fotos/bebidas.webp" alt="Latas de refrigerante e caixa de suco del Valle de laranja" width="548" height="354" loading="lazy">
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ COMO PEDIR ============ -->
+    <section class="secao secao--amarela" id="como-pedir" aria-labelledby="como-titulo">
+      <div class="container como__grade">
+        <div class="como__intro">
+          <p class="eyebrow eyebrow--escuro reveal">Como pedir</p>
+          <h2 class="h2 reveal" id="como-titulo" style="--d:.06s">Peça com antecedência, retire no domingo.</h2>
+          <p class="adesivo adesivo--escuro reveal" style="--d:.12s">
+            <svg class="ico" aria-hidden="true"><use href="#ico-sacola"/></svg>
+            <span>Apenas retirada<br>no local!</span>
+          </p>
+        </div>
+
+        <ol class="passos">
+          <li class="reveal" style="--d:.06s">
+            <span class="passo__n" aria-hidden="true">1</span>
+            <div>
+              <h3>Monte seu pedido</h3>
+              <p>Escolha os lanches, a porção de fritas e as bebidas aqui no site.</p>
+            </div>
+          </li>
+          <li class="reveal" style="--d:.12s">
+            <span class="passo__n" aria-hidden="true">2</span>
+            <div>
+              <h3>Envie pelo WhatsApp</h3>
+              <p>O pedido segue pronto para o <span class="nowrap">(11) 97279-6660</span>. Faça com antecedência!</p>
+            </div>
+          </li>
+          <li class="reveal" style="--d:.18s">
+            <span class="passo__n" aria-hidden="true">3</span>
+            <div>
+              <h3>Retire no local</h3>
+              <p>Aos domingos, das 18h às 22h, na Rua Corumbataí,&nbsp;597.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ ONDE ESTAMOS ============ -->
+    <section class="secao secao--visite" id="visite" aria-labelledby="visite-titulo">
+      <div class="container">
+        <header class="secao__cab">
+          <div>
+            <p class="eyebrow reveal">Onde estamos</p>
+            <h2 class="h2 aspero reveal" id="visite-titulo" style="--d:.06s">Venha <span>buscar</span> o seu</h2>
+            <svg class="faixa faixa--titulo reveal" style="--d:.12s" viewBox="0 0 320 16" preserveAspectRatio="none" aria-hidden="true"><use href="#faixa"/></svg>
+          </div>
+          <p class="status status--grande reveal" style="--d:.18s" data-status hidden>
+            <span class="status__ponto" aria-hidden="true"></span>
+            <span data-status-texto></span>
+          </p>
+        </header>
+
+        <div class="info">
+          <article class="info__item reveal">
+            <svg class="info__ico" aria-hidden="true"><use href="#ico-calendario"/></svg>
+            <div>
+              <h3>Todos os domingos</h3>
+              <p>Das 18h às 22h</p>
+            </div>
+          </article>
+          <article class="info__item reveal" style="--d:.07s">
+            <svg class="info__ico" aria-hidden="true"><use href="#ico-pin"/></svg>
+            <div>
+              <h3>Rua Corumbataí, 597</h3>
+              <p>Vila Hortolândia · Jundiaí</p>
+              <a class="link-seta" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Corumbata%C3%AD+597+Vila+Hortol%C3%A2ndia+Jundia%C3%AD+SP" target="_blank" rel="noopener">Abrir no Google Maps <svg class="ico" aria-hidden="true"><use href="#ico-seta"/></svg></a>
+            </div>
+          </article>
+          <article class="info__item reveal" style="--d:.14s">
+            <svg class="info__ico" aria-hidden="true"><use href="#ico-whatsapp"/></svg>
+            <div>
+              <h3>(11) 97279-6660</h3>
+              <p>Faça seu pedido com antecedência!</p>
+              <a class="link-seta" href="https://wa.me/5511972796660?text=Ol%C3%A1%2C%20Peregrino's%20Burger!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener">Chamar no WhatsApp <svg class="ico" aria-hidden="true"><use href="#ico-seta"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div class="rodape__marca">
+        <img src="assets/marca/logo.webp" alt="Peregrino's Burger — sabor de verdade, em cada mordida!" width="474" height="592" loading="lazy">
+      </div>
+      <nav class="rodape__nav" aria-label="Rodapé">
+        <h2>Navegue</h2>
+        <ul>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#extras">Fritas e bebidas</a></li>
+          <li><a href="#como-pedir">Como pedir</a></li>
+          <li><a href="#visite">Onde estamos</a></li>
+        </ul>
+      </nav>
+      <div class="rodape__contato">
+        <h2>Fale com a gente</h2>
+        <address>
+          Rua Corumbataí, 597<br>Vila Hortolândia · Jundiaí
+        </address>
+        <p><a class="nowrap" href="tel:+5511972796660">(11) 97279-6660</a></p>
+        <p>Todos os domingos, das 18h às 22h</p>
+        <p class="rodape__aviso">Apenas retirada no local.</p>
+      </div>
+    </div>
+    <p class="container rodape__copy">© <span data-ano>2026</span> Peregrino's Burger. Sabor de verdade, em cada mordida!</p>
+  </footer>
+
+  <!-- ============ BARRA DO PEDIDO ============ -->
+  <div class="barra" data-barra hidden>
+    <button class="barra__botao" type="button" data-abrir-pedido aria-haspopup="dialog">
+      <span class="barra__sacola"><svg class="ico" aria-hidden="true"><use href="#ico-sacola"/></svg><b data-barra-qtd>0</b></span>
+      <span class="barra__texto"><strong>Ver meu pedido</strong><small data-barra-itens>0 itens</small></span>
+      <span class="barra__total" data-barra-total>R$ 0,00</span>
+    </button>
+  </div>
+
+  <!-- ============ PEDIDO (janela) ============ -->
+  <dialog class="gaveta" data-gaveta aria-labelledby="gaveta-titulo">
+    <form class="gaveta__form" data-form novalidate>
+      <header class="gaveta__cab">
+        <div>
+          <h2 id="gaveta-titulo">Seu pedido</h2>
+          <p>Retirada no local, aos domingos.</p>
+        </div>
+        <button class="gaveta__fechar" type="button" data-fechar aria-label="Fechar pedido"><svg class="ico" aria-hidden="true"><use href="#ico-fechar"/></svg></button>
+      </header>
+
+      <div class="gaveta__corpo">
+        <div class="gaveta__vazio" data-vazio hidden>
+          <p>Seu pedido está vazio.</p>
+          <a class="btn btn--amarelo btn--pequeno" href="#cardapio" data-fechar><span>Escolher um lanche</span></a>
+        </div>
+
+        <div class="gaveta__lista-cab" data-lista-cab><button class="gaveta__limpar" type="button" data-limpar>Limpar pedido</button></div>
+        <ul class="linhas" data-linhas></ul>
+
+        <div class="gaveta__dados" data-dados>
+          <div class="campo">
+            <label for="pedido-nome">Seu nome</label>
+            <input id="pedido-nome" name="nome" type="text" autocomplete="given-name" maxlength="60" required aria-describedby="erro-nome">
+            <p class="campo__erro" id="erro-nome" data-erro="nome" hidden>Escreva seu nome para a gente te chamar na retirada.</p>
+          </div>
+          <div class="campo">
+            <label for="pedido-hora">Horário de retirada <span data-retirada-dia></span></label>
+            <select id="pedido-hora" name="hora" required aria-describedby="erro-hora"></select>
+            <p class="campo__erro" id="erro-hora" data-erro="hora" hidden>Escolha o horário em que você vai retirar.</p>
+          </div>
+          <div class="campo">
+            <label for="pedido-obs">Observações <span class="campo__opcional">(opcional)</span></label>
+            <textarea id="pedido-obs" name="obs" rows="2" maxlength="300" placeholder="Ex.: sem cebola no Jubileu"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <footer class="gaveta__rodape" data-rodape>
+        <p class="gaveta__total"><span>Total</span><strong data-total>R$ 0,00</strong></p>
+        <button class="btn btn--verde btn--grande btn--cheio" type="submit"><span><svg class="ico" aria-hidden="true"><use href="#ico-whatsapp"/></svg> Enviar pedido pelo WhatsApp</span></button>
+        <p class="gaveta__nota">O WhatsApp abre com o pedido já escrito. É só enviar.</p>
+      </footer>
+    </form>
+  </dialog>
+
+  <div class="sr-only" role="status" aria-live="polite" data-aviso></div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
